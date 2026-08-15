@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090909">
+  <title>PROGO — Desert Road Trip</title>
+  <link rel="stylesheet" href="./web/style.css">
+</head>
+<body>
+  <div id="menu" class="screen">
+    <div class="card">
+      <div class="logo">PROGO</div>
+      <p class="tagline">DESERT ROAD TRIP</p>
+      <input id="name" maxlength="18" placeholder="Your driver name" autocomplete="off">
+      <button id="play">START DRIVING</button>
+      <div class="hint">WASD / arrows to move and drive · Mouse to look · E to enter / exit</div>
+      <div class="status">Browser prototype · no installation required</div>
+    </div>
+  </div>
+  <div id="hud" class="hidden">
+    <div class="top"><b>PROGO</b><span id="playerName"></span></div>
+    <div class="bottom"><span id="speed">0 km/h</span><span>E — Enter / Exit</span><span>ESC — Menu</span></div>
+  </div>
+  <div id="crosshair" class="hidden">+</div>
+  <script type="module" src="./web/game.js"></script>
+</body>
+</html>
