@@ -1,30 +1,42 @@
 # Progo
 
-A standalone multiplayer 3D desert road-trip game prototype.
+A standalone browser-playable 3D desert road-trip prototype, with a Unity-oriented architecture for the larger multiplayer game.
 
-## Direction
+## Play in a browser
 
-- First-person player POV
-- Walk around the world
-- Enter and exit cars
-- Animated vehicle doors
-- Driver and passenger seats
-- Drivable vehicles
-- Multiplayer-ready architecture
-- Desert highway environment
+The repository now has a **root `index.html`**, so Vercel and Netlify can deploy the project from the repository root without setting `web/` as the root directory.
 
-## Prototype architecture
+### Vercel
 
-This repository starts with engine-agnostic game architecture and Unity-ready C# gameplay scripts. Art, scenes, networking transport, and platform-specific configuration can be added incrementally.
+- Import `princehoque2009/progo`.
+- Framework preset: **Other** / static.
+- Build command: empty.
+- Output directory: `.`.
+- Deploy the `main` branch.
 
-## Controls (prototype)
+### Netlify
 
-- WASD — move / drive
-- Mouse — look
-- E — interact / enter vehicle
-- F — exit vehicle
-- Shift — sprint
+- Import the GitHub repository.
+- Build command: empty.
+- Publish directory: `.`.
 
-## Development
+## Browser controls
 
-The first milestone is the vehicle interaction loop: approach car → open door → enter seat → switch to interior POV → drive → exit.
+- Enter your driver name and click **START DRIVING**.
+- Click the game window to lock the mouse.
+- `WASD` / arrow keys — walk and drive.
+- Mouse — look around.
+- `E` — enter / exit the car when close.
+- `ESC` — release the mouse / return toward the menu.
+
+## Current browser prototype
+
+- First-person 3D camera
+- Procedural desert ground and highway
+- Road markings and desert props
+- Driveable prototype vehicle
+- Vehicle entry / exit loop
+- Basic speed HUD
+- Browser-only static deployment
+
+The current browser build is a **single-player prototype**. True account authentication, persistent profiles, friends, lobbies, matchmaking, and authoritative multiplayer require a backend and multiplayer server; those systems are documented in `docs/GAME_ARCHITECTURE.md` and remain separate from this static preview.
