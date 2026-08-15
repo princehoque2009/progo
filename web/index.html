@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Progo — Desert Road Trip</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="menu" class="screen">
+    <div class="card">
+      <div class="logo">PROGO</div>
+      <p class="tagline">A multiplayer desert road-trip prototype</p>
+      <input id="name" maxlength="18" placeholder="Display name" autocomplete="off">
+      <button id="play">PLAY</button>
+      <div class="hint">WASD / arrows to drive · Mouse to look · E to enter/exit</div>
+      <div class="status" id="status">Web prototype — no server required</div>
+    </div>
+  </div>
+  <div id="hud" class="hidden">
+    <div class="top"><b>PROGO</b><span id="playerName"></span></div>
+    <div class="bottom"><span id="speed">0 km/h</span><span>E — Enter / Exit</span><span>ESC — Menu</span></div>
+  </div>
+  <div id="crosshair" class="hidden">+</div>
+  <script type="module" src="./game.js"></script>
+</body>
+</html>
